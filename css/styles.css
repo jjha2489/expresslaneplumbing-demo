@@ -24,6 +24,17 @@ header {
     font-weight: bold;
 }
 
+.hero-sub {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.btn-primary {
+    background: #0077ff;
+}
+
+
 nav {
     margin-top: 10px;
 }
