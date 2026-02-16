@@ -1,6 +1,10 @@
 /* ------------------------------
-   GLOBAL STYLES
+   GLOBAL
 --------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -10,13 +14,17 @@ body {
     line-height: 1.6;
 }
 
+a {
+    color: inherit;
+}
+
 .container {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-weight: 700;
     color: #0a1a33; /* Deep navy */
 }
@@ -26,14 +34,17 @@ p, li {
 }
 
 /* ------------------------------
-   NAVIGATION
+   HEADER & NAV
 --------------------------------*/
 
 header {
-    background: #0a1a33; /* Deep navy */
-    padding: 20px 0;
+    background: #0a1a33;
+    padding: 18px 0;
     color: white;
-    border-bottom: 3px solid #d4af37; /* Gold accent */
+    border-bottom: 3px solid #d4af37;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .nav-container {
@@ -58,21 +69,24 @@ nav a {
 }
 
 nav a:hover {
-    color: #d4af37; /* Gold hover */
+    color: #d4af37;
 }
 
 /* ------------------------------
-   HERO SECTION
+   HERO
 --------------------------------*/
 
 .hero {
-    background: linear-gradient(rgba(10, 26, 51, 0.7), rgba(10, 26, 51, 0.7)),
-                url('https://images.unsplash.com/photo-1581091870627-3a5f9c5a4a3c?auto=format&fit=crop&w=1200&q=60');
+    background: linear-gradient(rgba(10, 26, 51, 0.8), rgba(10, 26, 51, 0.8)),
+                url('https://images.unsplash.com/photo-1581091870627-3a5f9c5a4a3c?auto=format&fit=crop&w=1400&q=60');
     background-size: cover;
     background-position: center;
-    padding: 120px 0;
-    text-align: center;
+    padding: 120px 0 140px;
     color: white;
+}
+
+.hero-inner {
+    max-width: 650px;
 }
 
 .hero h2 {
@@ -82,8 +96,7 @@ nav a:hover {
 
 .hero-sub {
     font-size: 20px;
-    max-width: 700px;
-    margin: 10px auto 20px;
+    margin: 10px 0 25px;
     color: #f0f0f0;
 }
 
@@ -101,7 +114,7 @@ nav a:hover {
 }
 
 .btn-primary {
-    background: #d4af37; /* Gold */
+    background: #d4af37;
     color: #0a1a33;
 }
 
@@ -135,12 +148,12 @@ section h3 {
 }
 
 /* ------------------------------
-   FEATURES GRID
+   FEATURE GRID
 --------------------------------*/
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 25px;
 }
 
@@ -148,11 +161,15 @@ section h3 {
     background: white;
     padding: 25px;
     border-radius: 10px;
-    text-align: center;
-    font-weight: 600;
+    text-align: left;
     border: 1px solid #e0e0e0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card h4 {
+    margin-top: 0;
+    margin-bottom: 8px;
 }
 
 .card:hover {
@@ -161,27 +178,46 @@ section h3 {
 }
 
 /* ------------------------------
-   SERVICE LIST
+   SERVICE LIST / CARDS
 --------------------------------*/
 
 .service-list {
     list-style: none;
     padding: 0;
-    max-width: 600px;
+    max-width: 800px;
     margin: auto;
 }
 
 .service-list li {
     background: white;
-    padding: 14px 18px;
+    padding: 16px 18px;
     margin-bottom: 12px;
     border-radius: 6px;
     border-left: 4px solid #d4af37;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
+/* Service cards on homepage */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.service-card h4 {
+    margin-top: 0;
+}
+
 /* ------------------------------
-   CTA SECTION
+   CTA
 --------------------------------*/
 
 .cta {
@@ -202,8 +238,90 @@ section h3 {
 --------------------------------*/
 
 .page {
-    max-width: 800px;
+    max-width: 850px;
     margin: auto;
+}
+
+/* ------------------------------
+   TESTIMONIALS
+--------------------------------*/
+
+.testimonials {
+    max-width: 900px;
+    margin: auto;
+}
+
+.testimonial {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    border-left: 4px solid #d4af37;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.testimonial-name {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* ------------------------------
+   AREAS
+--------------------------------*/
+
+.area-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: auto;
+}
+
+.area-list li {
+    background: white;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border-left: 4px solid #d4af37;
+}
+
+/* ------------------------------
+   CONTACT FORM
+--------------------------------*/
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 30px;
+}
+
+form {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
 }
 
 /* ------------------------------
@@ -216,4 +334,44 @@ footer {
     text-align: center;
     padding: 25px 0;
     border-top: 3px solid #d4af37;
+    margin-top: 40px;
+}
+
+/* ------------------------------
+   STICKY CALL BUTTON (MOBILE)
+--------------------------------*/
+
+.call-now {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    background: #d4af37;
+    color: #0a1a33;
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    z-index: 20;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .call-now {
+        display: inline-block;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        margin-left: 0;
+        margin-right: 18px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
 }
