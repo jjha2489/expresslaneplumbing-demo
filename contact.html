@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Express Lane Plumbing</title>
+    <meta name="description" content="Contact Express Lane Plumbing to book an appointment or request a quote.">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -16,6 +17,8 @@
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
+            <a href="areas.html">Service Areas</a>
+            <a href="testimonials.html">Testimonials</a>
             <a href="contact.html">Contact</a>
         </nav>
     </div>
@@ -24,11 +27,30 @@
 <section class="container page">
     <h2>Contact Us</h2>
 
-    <p><strong>Phone:</strong> (604) 446‑0445</p>
-    <p><strong>Email:</strong> info@expresslaneplumbing.ca</p>
-    <p><strong>Address:</strong> 14410 Chartwell Drive, Surrey, BC</p>
+    <div class="contact-grid">
+        <div>
+            <p><strong>Phone:</strong> (604) 446‑0445</p>
+            <p><strong>Email:</strong> info@expresslaneplumbing.ca</p>
+            <p><strong>Address:</strong> 14410 Chartwell Drive, Surrey, BC</p>
+            <p>Use the form to request service, ask a question, or request a quote. We’ll get back to you as soon as we can.</p>
+        </div>
 
-    <p>We’re here to help with all your plumbing needs. Reach out anytime — we offer same‑day service whenever possible.</p>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" required>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" name="_replyto" required>
+
+            <label for="phone">Phone</label>
+            <input id="phone" type="text" name="phone">
+
+            <label for="message">How can we help?</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button class="btn btn-primary" type="submit">Send Message</button>
+        </form>
+    </div>
 </section>
 
 <footer>
@@ -36,6 +58,8 @@
         <p>© 2024 Express Lane Plumbing — Demo Website</p>
     </div>
 </footer>
+
+<a class="call-now" href="tel:16044460445">Call Now</a>
 
 </body>
 </html>
